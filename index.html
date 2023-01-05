@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> AR </title>
+
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+  
+
+
+</head>
+
+<body>
+
+    <a-scene id="scene" vr-mode-ui="enabled:false" embedded arjs="trackingMethod:best; sourceType:webcam;
+  debugUIEnabled:false">
+
+   <a-assets>
+    <img id="card1" src="./assets/1.png">
+    <img id="card2" src="./assets/2.png">
+    <img id="card3" src="./assets/3.png">
+    <img id="card4" src="./assets/4.png">
+    <img id="card5" src="./assets/5.png">
+  </a-assets>
+
+  <a-marker type="pattern" url="./pattern-marker/pattern-train.patt">
+    <a-plane src="#card1" position="0 0 -1" width="2" height="1.5" rotation="-90 0 0"></a-plane>
+  </a-marker>
+
+  <a-marker type="pattern" url="./pattern-marker/pattern-aero.patt">
+    <a-plane src="#card2" position="0 0 -1" width="2" height="1.5" rotation="-90 0 0"></a-plane>
+  </a-marker>
+
+  <a-marker type="pattern" url="./pattern-marker/pattern-submarin.patt">
+    <a-plane src="#card3" position="0 0 -1" width="2" height="1.5" rotation="-90 0 0"></a-plane>
+  </a-marker>
+
+  <a-marker type="pattern" url="./pattern-marker/pattern-piano.patt">
+    <a-plane src="#card4" position="0 0 -1" width="2" height="1.5" rotation="-90 0 0"></a-plane>
+  </a-marker>
+
+  <a-marker type="pattern" url="./pattern-marker/pattern-camera.patt">
+    <a-plane src="#card5" position="0 0 -1" width="2" height="1.5" rotation="-90 0 0"></a-plane>
+  </a-marker>
+
+
+    </a-scene>
+
+</body>
+
+</html>
